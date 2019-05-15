@@ -1,0 +1,15 @@
+<view class="top_container">
+  <view class="logo">
+    <image class="logo_img" src="../../image/bilibili.png"></image>
+  </view>
+  <view class="input_box">
+    <input type="text" class="input_text" />
+    <image src="../../image/fangdajing.png" class="searh_icon"></image>
+  </view>
+  <view>
+    <image src="../../image/xihuanwawa.png" class="user_icon"></image>
+  </view>
+  <view class="down_app">
+    下载App
+  </view>
+</view>

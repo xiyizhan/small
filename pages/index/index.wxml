@@ -1,0 +1,4 @@
+<view>
+<!--引入头部组件 -->
+  <MyTitle></MyTitle>
+</view>
