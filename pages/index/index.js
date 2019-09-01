@@ -8,14 +8,70 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    //导航数据
+    navList:[] ,
+    currentIndex:0,
+    imgUrls: [],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 2000,
+    duration: 1000,
+    circular:true,
+    //列表数据
+    listData:[]
   },
+  getSwiperImg() {
+    let that = this;
+    wx.request({
+      url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/swiperList',
+      success(res) {
+        //console.log(res.data);
+        that.setData({
+          imgUrls: res.data.data.swiperList
+        });
 
+      }
+    })
+  },
+  getNavData(){
+    let that=this;
+    wx.request({
+      url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/navList',
+      success(res){
+        //console.log(res.data);
+        that.setData({
+          navList: res.data.data.navList
+        });
+      
+      }
+    })
+  },
+  activeNav(e){
+    console.log(e)
+    this.setData({
+      currentIndex: e.target.dataset.index
+    })
+  },
+  getListsData(){
+    let that = this;
+    wx.request({
+      url: 'https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videoslist',
+      success(res) {
+        console.log(res.data);
+        that.setData({
+          listData: res.data.data.videosList
+        })
+
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.getNavData();
+    this.getSwiperImg();
+    this.getListsData()
   },
 
   /**

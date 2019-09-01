@@ -1,40 +1,43 @@
 .top_container{
   width:100%;
   display: flex;
-  padding: 10rpx;
-  border:1px solid red;
+  padding:10rpx 4rpx;
   justify-content: space-around;
   align-items: center;
 }
 .logo_img{
-  width:140rpx;
+  width:130rpx;
   height: 60rpx;
 }
 .input_box{
   position: relative;
 }
 .input_text{
- width:200rpx;
-  border:1px solid rgb(206, 201, 201);
-  border-radius: 4px;
+ width:280rpx;
+ height: 60rpx;
+  background: #f4f4f4;
+  border-radius: 20px;
+  color: #999;
+  padding:0 50rpx 0 20rpx;
+  font-size:26rpx;
 }
 .searh_icon{
-  width:40rpx;
-  height: 34rpx;
+  width:30rpx;
+  height: 30rpx;
   position: absolute;
-  top:4px;
+  top:6px;
   right: 10px;
 }
 .user_icon{
   
-  width:54rpx;
-  height: 60rpx;
+  width:50rpx;
+  height: 50rpx;
 }
 .down_app{
  width:140rpx;
  height: 50rpx;
   font-size:30rpx;
-  background:pink;
+  background:#fb7299;
   color:white;
   text-align: center;
   line-height: 50rpx;

@@ -1,0 +1,55 @@
+<view class="main">
+  <!--引入头部组件 -->
+  <MyTitle></MyTitle>
+  <!--视频播放 -->
+  <view class="video_warper">
+    <video src="{{videoDetail.videoSrc}}" controls></video>
+    <view class="videoTitle">
+      <text>{{videoDetail.videoTitle}}</text>
+      <text class="iconfont icon-xiangxiajiantou"></text>
+    </view>
+    <view class="video_info">
+      <text class="videoAuthor">{{videoDetail.author}}</text>
+      <text>{{videoDetail.playCount}}次观看</text>
+      <text>{{videoDetail.commentCount}}弹幕</text>
+      <text>{{videoDetail.date}}</text>
+    </view>
+  </view>
+  <!--推荐视频-->
+  <view class="others_wraper">
+    <view class="others" wx:for="{{othersList}}" wx:key="{{index}}">
+      <view class="other_img">
+        <image src="{{item.imgSrc}}" mode="widthFix"></image>
+      </view>
+      <view class="other_info">
+        <view>
+          <text class="other_info_title">{{item.title}}</text>
+        </view>
+        <view>
+          <text>{{item.playMsg}}次观看</text>
+          <text>{{item.commentCount}}弹幕</text>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <!--评论-->
+  <view class="comment_wraper">
+    <view>
+      评论{{commentsList.commentTotalCount}}
+    </view>
+    <view class="comment_item" wx:for="{{commentsList.commentList}}" wx:key="{{index}}">
+      <view class="user_head">
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558355793019&di=fc24812c5d22ef1405d0137ef7957c7b&imgtype=0&src=http%3A%2F%2Fimg.52z.com%2Fupload%2Fnews%2Fimage%2F20180502%2F20180502085422_99240.jpg" mode="widthFix"></image>
+      </view>
+      <view class="comment_info">
+        <view class="comment_user">
+          <text class="commentName">{{item.username}}</text>
+          <text class="commentDate">{{item.commentDate}}</text>
+        </view>
+        <view class="comment_content">{{item.commentInfo}}</view>
+      </view>
+
+    </view>
+  </view>
+</view>

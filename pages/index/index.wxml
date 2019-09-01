@@ -1,4 +1,48 @@
 <view>
-<!--引入头部组件 -->
+  <!--引入头部组件 -->
   <MyTitle></MyTitle>
+  <!--导航模块 -->
+  <scroll-view scroll-x class="nav">
+  <navigator url="/pages/tab/tab">
+    <view class="nav_item {{index==currentIndex?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}" bindtap='activeNav' data-index="{{index}}">{{item.text}}</view>
+     </navigator>
+  </scroll-view>
+  <!--轮播 -->
+  <view class="sliders">
+
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="white">
+      <swiper-item class="swiper_item" wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <navigator>
+          <image src="{{item.imgSrc}}" class="slide-image" mode="widthFix" />
+        </navigator>
+      </swiper-item>
+
+    </swiper>
+  </view>
+  <!--列表 -->
+  <view class="list_waper">
+  <navigator url="../detail/detail?id={{item.id}}" class="list" wx:for="{{listData}}" wx:key="{{item.id}}">
+    <!--图片 -->
+      <view class="img_warper">
+        <image src="{{item.imgSrc}}" mode="widthFix"></image>
+        <!--播放量、点赞量 -->
+        <view class="img_info">
+          <view>
+            <text class="iconfont icon-bofangliang"></text>
+            <text class="play_count">{{item.playCount}}</text>
+          </view>
+          <view>
+            <text class="iconfont icon-pinglunliang_icon"></text>
+            <text class="comment_count">{{item.commentCount}}</text>
+          </view>
+        </view>
+      </view>
+    <!--描述 -->
+      <view class="desc">
+      {{item.desc}}
+      </view>
+    </navigator> 
+
+  </view>
+
 </view>

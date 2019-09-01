@@ -1,0 +1,15 @@
+<!--tab选项卡-->
+<view class="navHead">
+  <view class="navHeadItem {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">收藏列表</view>
+  <view class="navHeadItem {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">个人中心</view>
+</view>
+
+
+<swiper current='{{currentTab}}' duration='300'>
+  <swiper-item style="width:100%;background:yellow">
+    <view>收藏列表内容</view>
+  </swiper-item>
+   <swiper-item>
+    <view>个人中心内容</view>
+  </swiper-item>
+</swiper>

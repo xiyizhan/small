@@ -1,21 +1,71 @@
 /**index.wxss**/
-.userinfo {
+page{
+  color: #666;
+  padding:10rpx;
+}
+.nav{
+  white-space: nowrap;
+  padding:5rpx 0;
+}
+.nav_item{
+  padding:20rpx 45rpx;
+  font-size: 30rpx;
+  display: inline-block
+}
+.nav_item.active{
+  border-bottom: 5rpx solid #fb7299;
+}
+.sliders{
+  margin-top:10rpx;
+}
+.sliders swiper{
+  height: 220rpx;
+}
+.sliders navigator{
+  width:100%;
+  height: 100%;
+  
+}
+.sliders image{
+  width:100%;
+  height: 100%;
+  
+}
+/*列表详情*/
+.list_waper{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ 
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.list_waper .list{
+  width:48%;
+  margin-bottom:20rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.list_waper image{
+  border-radius: 15rpx;
+  width:100%;
 }
-
-.usermotto {
-  margin-top: 200px;
+.list .img_warper{
+  position: relative
+}
+.list .img_info{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  font-size:24rpx;
+  color:#fff;
+  position: absolute;
+  left:0;
+  bottom:10rpx;
+}
+.list .desc{
+  font-size:28rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+  white-space:normal;
 }

@@ -1,4 +1,4 @@
-// component/MyTitle/myTitle.js
+// component/MyNav/myNav.js
 Component({
   /**
    * 组件的属性列表
@@ -11,13 +11,14 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    //导航数据
+    navList: [],
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    
   }
 })

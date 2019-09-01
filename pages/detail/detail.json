@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText":"bilibili",
+  "navigationBarTitleText": "视频详情",
   "usingComponents": {
     "MyTitle": "../../component/MyTitle/myTitle"
   }
